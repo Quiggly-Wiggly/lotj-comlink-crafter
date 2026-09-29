@@ -1,0 +1,127 @@
+<MudletPackage version="1.001">
+  <TriggerPackage>
+    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+      <name>MCLComlinkFinished</name>
+      <packageName>LotJComlink</packageName>
+      <script>LotJComlink.mclOnComlinkFinished()</script>
+      <triggerType>0</triggerType>
+      <conditonLineDelta>0</conditonLineDelta>
+      <mStayOpen>0</mStayOpen>
+      <mCommand />
+      <mFgColor>#ff0000</mFgColor>
+      <mBgColor>#ffff00</mBgColor>
+      <mSoundFile />
+      <colorTriggerFgColor>#000000</colorTriggerFgColor>
+      <colorTriggerBgColor>#000000</colorTriggerBgColor>
+      <regexCodeList>
+        <string>^You finish your work and hold up your newly created comlink\.$</string>
+      </regexCodeList>
+      <regexCodePropertyList>
+        <integer>1</integer>
+      </regexCodePropertyList>
+    </Trigger>
+    <Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+      <name>MCLContainerFinished</name>
+      <packageName>LotJComlink</packageName>
+      <script>LotJComlink.mclOnContainerFinished()</script>
+      <triggerType>0</triggerType>
+      <conditonLineDelta>0</conditonLineDelta>
+      <mStayOpen>0</mStayOpen>
+      <mCommand />
+      <mFgColor>#ff0000</mFgColor>
+      <mBgColor>#ffff00</mBgColor>
+      <mSoundFile />
+      <colorTriggerFgColor>#000000</colorTriggerFgColor>
+      <colorTriggerBgColor>#000000</colorTriggerBgColor>
+      <regexCodeList>
+        <string>^You finish your work and hold up your newly created container\.$</string>
+      </regexCodeList>
+      <regexCodePropertyList>
+        <integer>1</integer>
+      </regexCodePropertyList>
+    </Trigger>
+  </TriggerPackage>
+  <TimerPackage />
+  <AliasPackage>
+    <Alias isActive="yes" isFolder="no">
+      <name>MCLAdd</name>
+      <packageName>LotJComlink</packageName>
+      <script>LotJComlink.dispatch("mcladd", matches[2] or "")</script>
+      <command />
+      <regex>(?i)^mcladd(?:\s+(.*))?$</regex>
+    </Alias>
+    <Alias isActive="yes" isFolder="no">
+      <name>MCLRemove</name>
+      <packageName>LotJComlink</packageName>
+      <script>LotJComlink.dispatch("mclremove", matches[2] or "")</script>
+      <command />
+      <regex>(?i)^mclremove(?:\s+(.*))?$</regex>
+    </Alias>
+    <Alias isActive="yes" isFolder="no">
+      <name>MCLContainer</name>
+      <packageName>LotJComlink</packageName>
+      <script>LotJComlink.dispatch("mclcontainer", matches[2] or "")</script>
+      <command />
+      <regex>(?i)^mclcontainer(?:\s+(.*))?$</regex>
+    </Alias>
+    <Alias isActive="yes" isFolder="no">
+      <name>MCLIterations</name>
+      <packageName>LotJComlink</packageName>
+      <script>LotJComlink.dispatch("mcliterations", matches[2] or "")</script>
+      <command />
+      <regex>(?i)^mcliterations(?:\s+(.*))?$</regex>
+    </Alias>
+    <Alias isActive="yes" isFolder="no">
+      <name>MCLList</name>
+      <packageName>LotJComlink</packageName>
+      <script>LotJComlink.dispatch("mcllist", matches[2] or "")</script>
+      <command />
+      <regex>(?i)^mcllist$</regex>
+    </Alias>
+    <Alias isActive="yes" isFolder="no">
+      <name>MCLClear</name>
+      <packageName>LotJComlink</packageName>
+      <script>LotJComlink.dispatch("mclclear", matches[2] or "")</script>
+      <command />
+      <regex>(?i)^mclclear$</regex>
+    </Alias>
+    <Alias isActive="yes" isFolder="no">
+      <name>MCLStart</name>
+      <packageName>LotJComlink</packageName>
+      <script>LotJComlink.dispatch("mclstart", matches[2] or "")</script>
+      <command />
+      <regex>(?i)^mclstart$</regex>
+    </Alias>
+    <Alias isActive="yes" isFolder="no">
+      <name>MCLStop</name>
+      <packageName>LotJComlink</packageName>
+      <script>LotJComlink.dispatch("mclstop", matches[2] or "")</script>
+      <command />
+      <regex>(?i)^mclstop$</regex>
+    </Alias>
+    <Alias isActive="yes" isFolder="no">
+      <name>MCLStatus</name>
+      <packageName>LotJComlink</packageName>
+      <script>LotJComlink.dispatch("mclstatus", matches[2] or "")</script>
+      <command />
+      <regex>(?i)^mclstatus$</regex>
+    </Alias>
+    <Alias isActive="yes" isFolder="no">
+      <name>MCLHelp</name>
+      <packageName>LotJComlink</packageName>
+      <script>LotJComlink.dispatch("mclhelp", matches[2] or "")</script>
+      <command />
+      <regex>(?i)^mclhelp$</regex>
+    </Alias>
+  </AliasPackage>
+  <ActionPackage />
+  <ScriptPackage>
+    <Script isActive="yes" isFolder="no">
+      <name>LotJComlink Core</name>
+      <packageName>LotJComlink</packageName>
+      <script source="core.lua" />
+      <eventHandlerList />
+    </Script>
+  </ScriptPackage>
+  <KeyPackage />
+</MudletPackage>

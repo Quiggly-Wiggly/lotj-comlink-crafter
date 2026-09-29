@@ -1,0 +1,17 @@
+name: Package checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update && sudo apt-get install -y luajit
+      - name: Verify package and behavior
+        env:
+          LUA: luajit
+        run: python3 -m unittest discover -s tests -v
