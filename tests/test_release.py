@@ -73,4 +73,4 @@ class ReleaseTests(unittest.TestCase):
             line='You finish your work and hold up your newly created '+kind+'.'
             self.assertEqual(sum(bool(re.fullmatch(n.findtext('regexCodeList/string'),line)) for n in triggers),1)
         for node in doc.iter('packageName'): self.assertEqual(node.text,'LotJComlink')
-        self.assertIn('@RussM',builder.package_files()['config.lua'].decode())
+        self.assertIn('Ruusm',builder.package_files()['config.lua'].decode())

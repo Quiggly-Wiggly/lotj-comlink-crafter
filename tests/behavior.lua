@@ -60,6 +60,7 @@ assert(#links==#expected)
 for i,link in ipairs(links) do link.fn();assert(draft==expected[i]) end
 local lines=0 for line in text():gmatch('[^\n]+') do lines=lines+1;assert(#line<=76,line) end
 assert(lines<=15 and #sent==0)
+contains("Ported from Ruusm's MUSHclient script.")
 passed('all 11 links prefill exact commands; compact help sends nothing')
 command('mcladd',"'sample one' 12345");command('mcladd','"sample \'two\'" 23456')
 command('mclcontainer',"'sample case' case");command('mcliterations','3')

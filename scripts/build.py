@@ -7,7 +7,7 @@ import zipfile
 ROOT=Path(__file__).resolve().parents[1]
 PACKAGE='LotJComlink'
 TITLE='LotJ Comlink Crafter'
-VERSION='1.5.0'
+VERSION='1.5.1'
 ARTIFACT='LotJ Comlink Crafter.mpackage'
 
 def package_files():
@@ -16,7 +16,7 @@ def package_files():
         source=script.attrib.pop('source',None)
         if source: script.text=(ROOT/'src'/source).read_text()
     xml=b'<?xml version="1.0" encoding="UTF-8"?>\n<!DOCTYPE MudletPackage>\n'+ET.tostring(doc.getroot(),encoding='utf-8')+b'\n'
-    config=f'mpackage = [[{PACKAGE}]]\ntitle = [[{TITLE}]]\nversion = [[{VERSION}]]\nauthor = [[@RussM (original); Quiggly-Wiggly (Mudlet port)]]\n'
+    config=f'mpackage = [[{PACKAGE}]]\ntitle = [[{TITLE}]]\nversion = [[{VERSION}]]\nauthor = [[Ruusm (original); Quiggly-Wiggly (Mudlet port)]]\n'
     return {PACKAGE+'.xml':xml,'config.lua':config.encode(),'README.md':(ROOT/'README.md').read_bytes()}
 
 def build(output=None):

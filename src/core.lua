@@ -1,7 +1,7 @@
--- LotJComlink 1.5.0, adapted from @RussM's MUSHclient v1.3.
+-- LotJComlink 1.5.1, adapted from Ruusm's MUSHclient v1.3.
 -- Edit WEAR_LOCATION / COMLINK_KEYWORD below to customize item targeting.
 if LotJComlink and LotJComlink.shutdown then LotJComlink.shutdown() end
-LotJComlink = {version="1.5.0"}
+LotJComlink = {version="1.5.1"}
 local M = LotJComlink
 local handlers = {}
 
@@ -372,6 +372,7 @@ end
 
 local function mclHelp()
   heading("Commands")
+  row({"muted", "  Ported from Ruusm's MUSHclient script."})
   local entries = {
     {"mcladd '<name>' [frequency]", "Queue comlink", "mcladd ''"},
     {"mclremove <number>", "Remove entry", "mclremove "},

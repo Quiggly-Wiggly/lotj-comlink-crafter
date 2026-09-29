@@ -1,7 +1,7 @@
 # LotJ Comlink Crafter
 
 Queue, craft, optionally tune, and pack comlinks in repeated batches in Mudlet.
-Adapted from **@RussM's LotJComlink MUSHclient plugin v1.3**; Mudlet conversion
+Adapted from **Ruusm's LotJComlink MUSHclient plugin v1.3**; Mudlet conversion
 and maintenance by **Quiggly-Wiggly**.
 
 ## Install
